@@ -1,0 +1,13 @@
+{
+  "name": "sophiecalixto/php-pf",
+  "description": "A study project of the functional paradigm in the PHP language.",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "sophiecalixto",
+      "email": "sophiecalixto2004@gmail.com"
+    }
+  ],
+  "require": {
+  }
+}

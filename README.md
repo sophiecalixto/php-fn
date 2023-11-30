@@ -1,0 +1,1 @@
+A study project of the functional paradigm in the PHP language.
