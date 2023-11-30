@@ -10,5 +10,9 @@ $countryNames = array_map(function ($country) {
 $countryNamesUpperCase = array_map(function ($country) {
     return strtoupper($country['country']);
 }, $data);
+//Create a new array with countries that have the letter A
+$countriesWithLetterA = array_filter($data, function($country) {
+    return str_contains($country['country'], 'A');
+});
 
-var_dump($countryNamesUpperCase);
+var_dump($countriesWithLetterA);
