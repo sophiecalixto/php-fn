@@ -14,5 +14,12 @@ $countryNamesUpperCase = array_map(function ($country) {
 $countriesWithLetterA = array_filter($data, function($country) {
     return str_contains($country['country'], 'A');
 });
+//Create a new array with the value of all medal
+$allMedals = array_map(function ($country) {
+    return array_sum($country['medals']);
+}, $data);
+$allMedalsQuantity = array_reduce($allMedals, function($countable, $actualCount) {
+    return $countable + $actualCount;
+}, 0);
 
-var_dump($countriesWithLetterA);
+var_dump($allMedalsQuantity);
