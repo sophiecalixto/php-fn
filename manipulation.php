@@ -13,3 +13,11 @@ $allMedals = array_map(fn ($country) : float|int => array_sum($country['medals']
 $allMedalsQuantity = array_reduce($allMedals, fn($countable, $actualCount) : int => $countable + $actualCount, 0);
 
 var_dump($allMedalsQuantity);
+
+// Example of a curried function
+$sum = fn($a) : callable => fn($b) : float|int => $a + $b;
+
+$sumBy2 = $sum(2);
+$sumResult = $sumBy2(4);
+
+var_dump($sumResult);
